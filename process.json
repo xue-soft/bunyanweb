@@ -1,0 +1,20 @@
+ {
+   "apps": [{
+     "name": "bunyanweb",
+     "script": "./bin/www",
+     "watch": true,
+     "env": {
+       "NODE_ENV": "development",
+     },
+     "env_production": {
+       "NODE_ENV": "production"
+     },
+     "log_date_format": "YYYY-MM-DD HH:mm:SS",
+     "log_file": "D:/nodejsdemo/bunyanweblogs/app1.log",
+     "error_file": "D:/nodejsdemo/bunyanweblogs/app1-err.log",
+     "out_file": "D:/nodejsdemo/bunyanweblogs/app1-out.log",
+     "pid_file": "D:/nodejsdemo/bunyanweblogs/app1.pid",
+     "exec_mode": "cluster_mode",
+     "instances": 1
+   }]
+ }

@@ -10,6 +10,18 @@ var users = require('./routes/users');
 
 var app = express();
 
+var AppLog = require('./lib/log/appLog');
+var appLog = new AppLog();
+var log = appLog.getLog();
+// 本地全局变量
+// 将设置为不可删除、只读
+Object.defineProperty(global,"log",{
+  value:log,
+  writable:false,
+  configurable:false,
+});
+console.log("appLog.js getLog is run"+__dirname);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
